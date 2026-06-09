@@ -7,12 +7,12 @@ public class Conexion {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            // Reemplaza esto con los datos reales de texto que veas en tu Railway:
-            String host = "viaduct.proxy.rlwy.net"; // Reemplázalo si tu dominio público es otro
-            String puerto = "TU_PUERTO_PÚBLICO";    // El número que venga en tu MYSQL_PUBLIC_URL
+            // PEGA AQUÍ LOS DATOS QUE COPIASTE DE LA PESTAÑA "CONNECT"
+            String host = "mysql.railway.internal";
+            String puerto = "3306";
             String db = "railway";
             String user = "root";
-            String pass = "";                       // Déjalo vacío si no te generó contraseña
+            String pass = "tlqEBVkVwzSbDFTWcaUjNwmVgUJMKBgy";
 
             String url = "jdbc:mysql://" + host + ":" + puerto + "/" + db + "?useSSL=false&serverTimezone=UTC";
             cn = DriverManager.getConnection(url, user, pass);

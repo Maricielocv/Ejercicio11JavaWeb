@@ -8,13 +8,12 @@ public class Conexion {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             // PEGA AQUÍ TUS CREDENCIALES REALES DE RAILWAY (De la pestaña Connect)
-            String host = "mysql.railway.internal";     // Ejemplo: viaduct.proxy.rlwy.net
-            String puerto = "3306"; // Tu número de puerto público
+            String host = "acela.proxy.rlwy.net";
+            String puerto = "46275";
             String db = "railway";
             String user = "root";
-            String pass = "tlqEBVkVwzSbDFTWcaUjNwmVgUJMKBgy"; // Tu contraseña larga
+            String pass = "tlqEBVkVwzSbDFTWcaUjNwmVgUJMKBgy"; String url = "jdbc:mysql://" + host + ":" + puerto + "/" + db + "?useSSL=false&serverTimezone=UTC";
 
-            String url = "jdbc:mysql://" + host + ":" + puerto + "/" + db + "?useSSL=false&serverTimezone=UTC";
             cn = DriverManager.getConnection(url, user, pass);
 
             // AUTOMATIZACIÓN: Java creará la tabla si no existe en la nube
